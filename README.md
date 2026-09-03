@@ -4,7 +4,7 @@ Repository ini digunakan untuk menyimpan proyek dan hasil praktikum mata kuliah 
 
 Proyek yang digunakan dalam praktikum ini meliputi pengembangan aplikasi web menggunakan **Laravel (PHP)** dan **Fiber (Go)**.
 
-## 👤 Identitas
+## Identitas
 
 | Data | Keterangan |
 |---|---|
@@ -15,7 +15,7 @@ Proyek yang digunakan dalam praktikum ini meliputi pengembangan aplikasi web men
 | Universitas | Universitas Jenderal Soedirman |
 | Tahun Akademik | 2026/2027 |
 
-## 📁 Struktur Repository
+## Struktur Repository
 
 ```text
 .
