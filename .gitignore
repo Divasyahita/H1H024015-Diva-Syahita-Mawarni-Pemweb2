@@ -1,0 +1,10 @@
+# Laravel
+Pertemuan-1/vendor/
+Pertemuan-1/.env
+
+# Fiber / Go
+latihan-fiber/*.exe
+latihan-fiber/latihan-fiber
+
+# Editor
+.vscode/
