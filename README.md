@@ -19,7 +19,7 @@ Proyek yang digunakan dalam praktikum ini meliputi pengembangan aplikasi web men
 
 ```text
 .
-├── Pertemuan-1/
+├── latihan-laravel/
 │   └── Proyek Laravel
 │
 ├── latihan-fiber/
