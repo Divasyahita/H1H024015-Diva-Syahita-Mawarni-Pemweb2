@@ -19,10 +19,10 @@ Proyek yang digunakan dalam praktikum ini meliputi pengembangan aplikasi web men
 
 ```text
 .
-├── latihan-laravel/
+├── latihan-fiber/
 │   └── Proyek Laravel
 │
-├── latihan-fiber/
+├── latihan-laravel/
 │   └── Proyek Fiber
 │
 ├── .gitignore
