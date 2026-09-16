@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MatakuliahController;
+use App\Http\Controllers\MahasiswaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -12,3 +13,5 @@ Route::get('/data-matakuliah', [MatakuliahController::class, 'index'])
 
 Route::get('/data-matakuliah/{kode}', [MatakuliahController::class, 'show'])
     ->name('matakuliah.show');
+    
+Route::get('/mahasiswa/{id}', [MahasiswaController::class, 'show']);
