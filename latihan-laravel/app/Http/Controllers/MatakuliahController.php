@@ -2,61 +2,64 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Matakuliah;
 use Illuminate\Http\Request;
 
 class MatakuliahController extends Controller
 {
-    public function index(Request $request)
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
     {
-        $daftarMatakuliah = [
-            [
-                'kode' => 'TK101',
-                'nama' => 'Pemrograman Web II',
-                'sks' => 3,
-            ],
-            [
-                'kode' => 'TK102',
-                'nama' => 'Sistem Operasi',
-                'sks' => 3,
-            ],
-            [
-                'kode' => 'TK103',
-                'nama' => 'Jaringan Komputer',
-                'sks' => 3,
-            ],
-            [
-                'kode' => 'TK104',
-                'nama' => 'Sistem Kendali',
-                'sks' => 2,
-            ],
-            [
-                'kode' => 'TK105',
-                'nama' => 'Internet of Things',
-                'sks' => 2,
-            ],
-        ];
-
-        $kataKunci = $request->query('q', '');
-
-        if ($kataKunci !== '') {
-            $daftarMatakuliah = array_filter(
-                $daftarMatakuliah,
-                function ($matakuliah) use ($kataKunci) {
-                    return stripos($matakuliah['nama'], $kataKunci) !== false;
-                }
-            );
-        }
-
-        return view('matakuliah.index', [
-            'daftarMatakuliah' => $daftarMatakuliah,
-            'kataKunci' => $kataKunci
-        ]);
+        //
     }
 
-    public function show(string $kode)
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
     {
-        return view('matakuliah.show', [
-            'kode' => $kode
-        ]);
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(Matakuliah $matakuliah)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(Matakuliah $matakuliah)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, Matakuliah $matakuliah)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(Matakuliah $matakuliah)
+    {
+        //
     }
 }

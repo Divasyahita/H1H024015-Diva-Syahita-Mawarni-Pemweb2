@@ -2,15 +2,47 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Mahasiswa;
+use Illuminate\Http\Request;
 
 class MahasiswaController extends Controller
 {
-    public function show($id)
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
     {
-        $mahasiswa = Mahasiswa::with(['programStudi', 'matakuliah'])
-            ->findOrFail($id);
+        //
+    }
 
-        return view('mahasiswa.show', compact('mahasiswa'));
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        //
     }
 }
