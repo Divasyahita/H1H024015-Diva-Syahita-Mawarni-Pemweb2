@@ -5,15 +5,16 @@ import (
 	"github.com/gofiber/fiber/v3"
 
 	"latihan-fiber-api/internal/handler"
+	"latihan-fiber-api/internal/middleware"
 )
 
-// Fungsi untuk mendaftarkan semua endpoint API
+// Daftarkan digunakan untuk mendaftarkan seluruh endpoint API
 func Daftarkan(app *fiber.App) {
 
-	// Membuat grup route /api
+	// Membuat grup endpoint /api
 	api := app.Group("/api")
 
-	// Endpoint untuk mengecek status API
+	// Endpoint status tetap bisa diakses tanpa API Key
 	api.Get("/status", func(c fiber.Ctx) error {
 		return c.JSON(fiber.Map{
 			"sukses": true,
@@ -23,9 +24,10 @@ func Daftarkan(app *fiber.App) {
 
 	mahasiswa := api.Group("/mahasiswa")
 
+	mahasiswa.Use(middleware.KunciApi())
+
 	mahasiswa.Get("/", handler.DaftarMahasiswa)
 
 	mahasiswa.Get("/nim/:nim", handler.CariMahasiswaNim)
-
 	mahasiswa.Get("/:id", handler.DetailMahasiswa)
 }
