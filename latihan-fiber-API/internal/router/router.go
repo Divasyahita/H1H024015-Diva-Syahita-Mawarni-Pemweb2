@@ -21,12 +21,11 @@ func Daftarkan(app *fiber.App) {
 		})
 	})
 
-	// Membuat grup route mahasiswa
 	mahasiswa := api.Group("/mahasiswa")
 
-	// Menampilkan semua mahasiswa
 	mahasiswa.Get("/", handler.DaftarMahasiswa)
 
-	// Menampilkan detail mahasiswa berdasarkan ID
+	mahasiswa.Get("/nim/:nim", handler.CariMahasiswaNim)
+
 	mahasiswa.Get("/:id", handler.DetailMahasiswa)
 }

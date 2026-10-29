@@ -67,3 +67,31 @@ func DetailMahasiswa(c fiber.Ctx) error {
 		"Mahasiswa tidak ditemukan",
 	)
 }
+
+
+// CariMahasiswaNim digunakan untuk mencari mahasiswa berdasarkan NIM
+func CariMahasiswaNim(c fiber.Ctx) error {
+
+    // Mengambil NIM dari URL
+    nim := c.Params("nim")
+
+    // Mengecek setiap mahasiswa dalam daftar
+    for _, mahasiswa := range model.Daftar {
+
+        // Jika NIM mahasiswa sama dengan NIM yang dicari
+        if mahasiswa.Nim == nim {
+
+            // Mengembalikan data mahasiswa dalam format JSON
+            return c.JSON(fiber.Map{
+                "sukses": true,
+                "data":   mahasiswa,
+            })
+        }
+    }
+
+    // Jika NIM tidak ditemukan, mengembalikan error 404
+    return fiber.NewError(
+        fiber.StatusNotFound,
+        "Mahasiswa dengan NIM tersebut tidak ditemukan",
+    )
+}
