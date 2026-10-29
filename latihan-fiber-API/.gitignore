@@ -1,0 +1,20 @@
+
+# File konfigurasi lokal
+.env
+.env.local
+
+# Folder hasil build aplikasi Go
+/bin/
+
+# File executable Windows
+*.exe
+
+# File log
+*.log
+
+# File sementara
+*.tmp
+
+# Folder pengaturan editor
+.vscode/
+.idea/
