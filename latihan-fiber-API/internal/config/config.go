@@ -1,19 +1,18 @@
 package config
 
 import (
-	"os" // Membaca environment variable
+	"os" 
 
-	"github.com/joho/godotenv" // Membaca file .env
+	"github.com/joho/godotenv"
 )
 
-// Struct untuk menyimpan konfigurasi aplikasi
 type Konfigurasi struct {
 	NamaAplikasi string
 	Port         string
 	Lingkungan   string
 }
 
-// Fungsi untuk memuat konfigurasi dari file .env
+
 func Muat() Konfigurasi {
 	godotenv.Load()
 
